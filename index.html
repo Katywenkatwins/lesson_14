@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 14</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			Я хедер
+		</header>
+		<main class="page">
+			<div class="page__block">
+				<!-- Приклад з текстом -->
+				<div class="text-block" id="menu">
+					<h1 class="text-block__title">FLEX</h1>
+					<ul class="text-block__list">
+						<li><a href="#wrap" class="text-block__link">flex-wrap</a></li>
+						<li><a href="#justify" class="text-block__link">justify-content</a></li>
+						<li><a href="#align-items" class="text-block__link">align-items</a></li>
+						<li><a href="#flex-direction" class="text-block__link">flex-direction</a></li>
+						<li><a href="#flex-element" class="text-block__link">flex element</a></li>
+						<li><a href="#omg" class="text-block__link">Фішки</a></li>
+					</ul>
+					<div class="text-block__text">
+						Flexbox - це цілий модуль,
+						що містить у собі набір властивостей та їх значень як для
+						батька flex-контейнера, так і для його дочірніх елементів
+						flex-елементів.
+						Основною перевагою гнучкої FLEX розмітки є можливість
+						змінювати ширину/висоту простір навколо та
+						порядок flex-елементів, для того, щоб найкращим
+						чином заповнити доступний простір flex-контейнера.
+					</div>
+				</div>
+			</div>
+			<div class="page__block">
+				<!-- FLEX-контейнер -->
+				<h2 id="wrap">flex-wrap</h2>
+				<h3>nowrap</h3>
+				<div class="block block--nowrap">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>wrap</h3>
+				<div class="block block--wrap">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>wrap-reverse</h3>
+				<div class="block block--wrap-reverse">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h2 id="justify">justify-content</h2>
+				<h3>flex-start</h3>
+				<div class="block block--flex-start">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>flex-end</h3>
+				<div class="block block--flex-end">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>center</h3>
+				<div class="block block--center">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>space-between</h3>
+				<div class="block block--space-between">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>space-around</h3>
+				<div class="block block--space-around">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>space-evenly</h3>
+				<div class="block block--space-evenly">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h2 id="align-items">align-items</h2>
+				<h3>strenth</h3>
+				<div class="block block--strenth">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>flex-start</h3>
+				<div class="block block--flex-start">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>flex-end</h3>
+				<div class="block block--flex-end">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h2 id="flex-direction">flex-direction</h2>
+				<h3>row</h3>
+				<div class="block block--row">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>column</h3>
+				<div class="block block--column">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>row-reverse</h3>
+				<div class="block block--row-reverse">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>column-reverse</h3>
+				<div class="block block--column-reverse">
+					<!-- FLEX-елемент -->
+					<div class="block__item">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h2 id="flex-element">FLEX-ELEMENT</h2>
+				<h3>align-self</h3>
+				<div class="block block--align-self">
+					<!-- FLEX-елемент -->
+					<div class="block__item block-item--center">center</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item block-item--flex-start">flex-start</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item block-item--flex-end">flex-end</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item block-item--stretch">stretch</a>
+				</div>
+				<h3>flex-grow</h3>
+				<div class="block">
+					<!-- FLEX-елемент -->
+					<div class="block__item block-item--flex-grow">flex-grow</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>flex-shrink</h3>
+				<div class="block">
+					<!-- FLEX-елемент -->
+					<div class="block__item block__item--flex-shrink">10</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2000000</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">300000</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>flex-basis</h3>
+				<div class="block">
+					<!-- FLEX-елемент -->
+					<div class="block__item block__item--flex-basis">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item">4</a>
+				</div>
+				<h3>order</h3>
+				<div class="block">
+					<!-- FLEX-елемент -->
+					<div class="block__item block__item--order">1</div>
+					<!-- FLEX-елемент -->
+					<span class="block__item block__item--order">2</span>
+					<!-- FLEX-елемент -->
+					<div class="block__item block__item--order">3</div>
+					<!-- FLEX-елемент -->
+					<a href="" class="block__item block__item--order">4</a>
+				</div>
+			</div>
+			<div class="page__block">
+				<!-- Фішка -->
+				<!-- FLEX-контейнер -->
+				<div class="page__row row">
+					<!-- FLEX-елемент -->
+					<div class="column">
+						<!-- Контент -->
+						<div class="item">
+							Колонка №1
+						</div>
+					</div>
+					<!-- FLEX-елемент -->
+					<div class="column">
+						<!-- Контент -->
+						<div class="item">
+							Колонка №2
+						</div>
+					</div>
+					<!-- FLEX-елемент -->
+					<div class="column">
+						<!-- Контент -->
+						<div class="item">
+							Колонка №3
+						</div>
+					</div>
+					<!-- FLEX-елемент -->
+					<div class="column">
+						<!-- Контент -->
+						<div class="item">
+							Колонка №4
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="page__block page__block--cards">
+				<h2 id="omg">Фішки</h2>
+				<!-- Приклад з картками -->
+				<div class="cards">
+					<div class="cards__column">
+						<div class="cards__item item-card">
+							<div class="item-card__image">
+								<img src="img/Надя.png" alt="">
+							</div>
+							<div class="item-card__name"><span>Надія</span></div>
+							<div class="item-card__text">
+								Авторка курсу "Ви-МОВА", спеціаліст з вимови, ментор курсу "Казка, яку ми створюємо разом
+							</div>
+							<a href="" class="item-card__button">Button</a>
+						</div>
+					</div>
+					<div class="cards__column">
+						<div class="cards__item item-card">
+							<div class="item-card__image">
+								<img src="img/DSC_0249 (3).png" alt="">
+							</div>
+							<div class="item-card__name"><span>Катерина Сміян</span></div>
+							<div class="item-card__text">
+								ментор творчих МК, курсу "Казка, яку ми створюємо разом", аромакоуч, координатор менторів,
+								ідейний організатор простору
+							</div>
+							<a href="" class="item-card__button">Button</a>
+						</div>
+					</div>
+					<div class="cards__column">
+						<div class="cards__item item-card">
+							<div class="item-card__image">
+								<img src="img/DSC_0249.png" alt="">
+							</div>
+							<div class="item-card__name"><span>Софія Кіцелюк</span></div>
+							<div class="item-card__text">
+								спеціаліст з української мови, авторка курсів та інтенсивів з української, СММ-спеціаліст
+							</div>
+							<a href="" class="item-card__button">Button</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="page__block page__block--float">
+				<!-- Приклад з float -->
+				<img class="image" style="width: 100px;" src="img/IMG_9080.PNG" alt="">
+				Йога, практики для чоловіків, жінок та дітей, інтенсиви, та творчі заняття. В нашому просторі наставники
+				проводять роботу на фізичному, ментальному, емоційному та енергетичному рівні за допомогою різноманітних
+				інструментів свідомості
+				<img class="image-2" style="width: 50px;" src="img/IMG_9080.PNG" alt="">
+			</div>
+			<div class="page__block">
+				<div class="example">
+					<div class="example__item item-example">
+						<div class="item-example__image">
+							<img src="img/IMG_9079.PNG" alt="">
+						</div>
+						<div class="item-example__text">
+							В просторі проводяться уроки з гри на блок-флейті як для доросли так і для дітей
+						</div>
+					</div>
+					<div class="example__item item-example">
+						<div class="item-example__image">
+							<img src="img/IMG_9078.PNG" alt="">
+						</div>
+						<div class="item-example__text">
+							Йога, саундхідлінг, цвяхостояння розкривають внутрішню природу. Ці інструменти направлені на
+							єднання фізичного, ментального, емоційного тіла.
+						</div>
+					</div>
+					<div class="example__item item-example">
+						<div class="item-example__image">
+							<img src="img/IMG_9077.PNG" alt="">
+						</div>
+						<div class="item-example__text">
+							Різні творчі заняття для дітей різних вікових категорій. Малювання, квілінг, бісероплетіння, вироби
+							з фетру, ліплення з пластиліну, макраме та ін.
+						</div>
+					</div>
+					<div class="example__item item-example">
+						<div class="item-example__image">
+							<img src="img//IMG_8695.PNG" alt="">
+						</div>
+						<div class="item-example__text">
+							Курс "Казка, яку ми створюємо разом". Розрахований для дітей і батьків для розкриття творчого
+							потенціалу та взаємодії дітей з батьками
+						</div>
+					</div>
+
+					<div class="page__block">
+						<!-- Приклад з width №2 -->
+						<div class="object">
+							<div class="object__icon"></div>
+							<div class="object__title">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus magni inventore, eveniet
+								enim
+								veritatis fugiat corrupti? Minima voluptatum magni, animi corporis, laborum dolore facere nisi
+								nulla
+								repellat illum, consectetur doloremque?
+							</div>
+						</div>
+					</div>
+					<div class="page__block">
+						<!-- Приклад з width -->
+						<a href="#menu" class="link">МЕНЮ</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			Я футер
+		</footer>
+	</div>
+</body>
+
+</html>

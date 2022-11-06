@@ -1,0 +1,506 @@
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+/* ============================ */
+
+body{
+	background-color: #E2ABA6;
+	position: relative;
+}
+.header{
+	font-family: ;
+	display: block;
+	background-color: #334d42e8;
+	padding: 15px;
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.footer {
+	background-color: #3d2c2fbe;
+	padding: 15px;
+	color: #fff;
+}
+
+
+.page{
+	
+	padding: 30px;
+}
+.page__block{
+	margin-bottom: 50px;
+}
+/*
+Flexbox - це цілий модуль,
+що містить у собі набір властивостей та їх значень як для 
+батька flex-контейнера, так і для його дочірніх елементів 
+flex-елементів. 
+Основною перевагою гнучкої FLEX розмітки є можливість 
+змінювати ширину/висоту простір навколо та 
+порядок flex-елементів, для того, щоб найкращим 
+чином заповнити доступний простір flex-контейнера.
+*/
+
+/* FLEX-контейнер */
+.block {
+	border: 5px solid #334d42e8;
+	background-color: #794f45;
+	/* Властивості FLEX-контейнера */
+	/* 
+	display: flex/inline-flex;
+	Визначає flex-контейнер,
+	блоковий або малий залежить від переданого значення. 
+	Перетворює всі свої прямі,
+	дочірні елементи у flex-елементи.
+	*/
+	display: flex;
+
+	/* 
+	gap
+	Проміжок між FLEX-елементами
+	Не залежить від flex-direction
+
+	*/
+	/* Загальний (колонками та рядками) */
+	/* gap: 20px; */
+
+	/* Між колонками */
+	column-gap: 0px;
+	/* Між рядками */
+	row-gap: 30px;
+
+}
+
+/*
+	Визначає, чи зможуть flex-елементи переміщатися 
+	на наступні рядки, коли перестають поміщатися 
+	всередині flex-контейнера.
+
+	nowrap - (за замовченням) Flex-елементи не можуть 
+	переміщатися на наступні рядки flex-контейнера.
+	wrap - Flex-елементи зможуть переміщатися на 
+	наступні рядки flex-контейнера.
+	wrap-reverse - Flex-елементи зможуть переміщатися 
+	на наступні рядки flex-контейнера, але у зворотному порядку.
+	*/
+.block--nowrap {
+	flex-wrap: nowrap;
+}
+.block--wrap {
+	flex-wrap: wrap;
+}
+.block--wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+/*
+	justify-content
+	Визначає вирівнювання вздовж основної осі 
+	(напрямок залежить від значення властивості flex-direction).
+	flex-start - Значення за промовчанням (не потрібно вказувати). 
+	Flex-елементи притискаються до початку осі.
+	flex-end - Flex-елементи притискаються вкінець осі.
+	center - Flex-елементи розташовуються в центрі основної осі.
+
+	space-between - Flex-елементи розміщуються 
+	поступово по основній осі. 
+	Перший елемент знаходиться на початку осі,
+	останній елемент знаходиться наприкінці осі.
+	Між елементами постійно однаковий простір
+
+	space-around - Flex-елементи розташовуються рівномірно 
+	по основній осі. До кожного flex-елементу 
+	додається простір ліворуч і праворуч.
+
+	space-evenly - Flex-елементи розташовуються рівномірно по 
+	основній осі з однаковим простором навколо них.
+	*/
+.block--flex-start{
+	justify-content: flex-start;
+}
+.block--flex-end{
+	justify-content: flex-end;
+}
+.block--center{
+	justify-content: center;
+}
+.block--space-between{
+	justify-content: space-between;
+}
+.block--space-around{
+	justify-content: space-around;
+}
+.block--space-evenly{
+	justify-content: space-evenly;
+}
+/*
+	align-items
+	Визначає вирівнювання вздовж поперечної осі 
+	(напрямок залежить від значення властивості flex-direction).
+	stretch - Значення за промовчанням (не потрібно вказувати). 
+	Flex-елементи розтягуються весь розмір поперечної осі 
+	flex-контейнера.
+	flex-start - Flex-елементи притискаються до 
+	початку поперечної осі.
+	flex-end - Flex-елементи притискаються вкінець поперечної осі.
+
+	*/
+.block--strenth{
+	align-items: stretch;
+}
+.block--flex-start{
+	align-items: flex-start;
+}
+.block--flex-end{
+	align-items: flex-end;
+}
+/*
+	flex-direction
+	Встановлює основну вісь,
+	таким чином визначає напрямок flex-елементів,
+	розташованих у flex-контейнері.
+	row - Значення за промовчанням (не потрібно вказувати). 
+	Основна вісь горизонтальна. Всі flex-елементи 
+	розташуються ліворуч по горизонталі.
+	*/
+.block--row{
+	flex-direction: row;
+}
+.block--column{
+	flex-direction: column;
+}
+.block--row-reverse{
+	flex-direction: row-reverse;
+}
+.block--column-reverse{
+	flex-direction: column-reverse;
+}
+
+/* 
+Властивості FLEX – елементів. 
+Застосовуються для flex-елемента,
+дочірнього об'єкта flex-контейнера
+*/
+
+/*
+	align-self
+	Перевизначає для конкретного flex-елемента 
+	вирівнювання вздовж поперечної осі 
+	(напрямок залежить від значення якості flex-direction).
+*/
+/* align-self: center; */
+
+.block--align-self {
+	height: 200px;
+	flex-wrap: nowrap;
+}
+
+.block-item--center {
+	align-self: center;
+}
+
+.block-item--flex-start {
+	align-self: flex-start;
+}
+.block-item--flex-end {
+	align-self: flex-end;
+
+}
+.block-item--stretch {
+	align-self: stretch;
+}
+/*
+flex-grow - 0 заборонено. 1 дозволено. (за замовченням - 0) 
+Визначає можливість елемента збільшуватись 
+у розмірі, 	при необхідності заповнюючи весь 
+flex-контейнер. 
+
+flex-shrink - 0 заборонено. 1 дозволено. (за замовченням - 1)
+Визначає можливість елемента зменшуватись 
+у розмірі, при необхідності заповнюючи весь flex-контейєр. 
+
+
+flex-basis - Визначає базовий розмір елемента за умовчанням,
+до розподілу простору, що залишився. 
+Значення можуть бути у відсотках пікселях тощо.
+auto - розмір по контенту
+*/
+
+/*
+flex-grow:1;
+flex-shrink:0;
+flex-basis: 200px;
+*/
+
+/* Універсальний запис */
+/* flex: 1 0 200px; */
+
+.block-item--flex-grow {
+	flex-grow: 1;
+}
+
+.block__item--flex-shrink{
+	flex-shrink:0;
+} 
+.block__item--flex-basis{
+	flex-basis: 200px;
+} 
+
+/*
+order
+Керує порядком,
+в якому розташовуються flex-елементи 
+всередині flex-контейнера.
+*/
+
+
+/* FLEX-елементи */
+.block__item {
+	color: #fff;
+	display: block;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	background-color: #E2ABA6;
+	padding: 10px 50px;
+	text-align: center;
+	border: 5px solid #77608d;
+
+}
+.block__item--order:nth-child(1) {
+	order: 3;
+}
+.block__item--order:nth-child(2){
+	order: 1;
+}
+.block__item--order:nth-child(3) {
+	order: 4;
+}
+.block__item--order:nth-child(4) {
+	order: 2;
+}
+
+h2{
+	padding: 10px;
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #fff;
+	
+}
+h3{
+	text-align: center;
+	color: #3d2c2fbe;
+	font-size: 20px;
+	padding: 10px;
+}
+
+ /* FLEX-контейнер */
+.row {
+	display: flex;
+	/* background-color: #794f45; */
+	flex-wrap: wrap;
+	row-gap: 20px;
+	margin:0 -7.5px;
+}
+/* FLEX-елемент */
+.column {
+	/* background-color: #77608d; */
+	flex: 0 1 25%;
+	padding: 0px 7.5px;
+}
+/* Контент */
+.item {
+	color: #fff;
+	padding: 10px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #3d2c2fbe;
+}
+
+
+/* приклад з текстом */
+
+.text-block {
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 20px;
+}
+.text-block__title {
+	font-size: 24px;
+}
+.text-block__text {
+	line-height: 120%;
+}
+.text-block__link {
+	color: #fff;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+}
+.text-block__link::before {
+	content:"";
+	flex: 0 0 20px;
+	width: 20px;
+	height: 20px;
+	background-color: #334d42bd;
+	border-radius: 50%;
+	border:  2px solid #fff;;
+	
+}
+
+/* Приклад з картками */
+.cards {
+	display: flex;
+	margin: 0px -15px;
+	flex-wrap: wrap;
+
+}
+.cards__column {
+	flex: 0 1 33.333%;
+	padding: 15px 15px;
+}
+.cards__item {
+	background-color: #334d42b2;
+	padding: 15px;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+	min-height: 100%;
+}
+
+.item-card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.item-card__image {
+	height: 80px;
+}
+.item-card__image img{
+	position: relative;
+	top: -30px;
+	left: -30px;
+	max-width: 100px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	background-color: #fff;
+}
+.item-card__name {
+	font-size: 20px;
+	padding: 5px;
+	background-color: #e2aba691;
+	color: #3d2c2fbe;
+}
+.item-card__text {
+	color: #fff;
+	flex-grow: 1;
+
+}
+
+.item-card__button {
+	background-color: #334d42b2;
+	padding: 5px;
+	border-radius: 20px;
+}
+
+
+/* 
+Приклад з width
+Приклад з текстом та псевдоелементом */
+.link{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #334d42b2;
+	display: inline-flex;
+	align-items: center;
+	gap: 15px;
+}
+.link::before{
+	content:"";
+	flex: 0 0 20px;
+	width: 20px;
+	height: 20px;
+	background-color: #334d42bd;
+	border-radius: 50%;
+}
+
+/* 
+Приклад з width №2
+Приклад з текстом та зображенням */
+
+.object {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+}
+.object__icon {
+	flex: 0 0 50px;
+	height: 50px;
+	background-color: #334d42bd;
+	border-radius: 50%;
+}
+.object__title{
+	color: #fff;
+}
+
+
+/* Приклад з float 
+Обтікання
+float: left / right;
+*/
+.image{
+	/* Обтікання */
+	float: left;
+	margin-right: 20px;
+}
+.image-2{
+	float: left;
+	margin-right: 20px;
+}
+.page__block--float{
+	min-height: 100px;
+}
+
+.example {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.example__item {}
+
+.item-example {
+	display: flex;
+	gap: 20px;
+	background-color: #334d42bd;
+	padding: 15px;
+}
+.item-example:nth-child(even){
+	flex-direction: row-reverse;
+}
+
+@media (max-width: 768px){
+	.item-example {
+		flex-direction: column-reverse;
+	}
+	.item-example:nth-child(even) {
+		flex-direction: column-reverse;
+	}
+}
+
+
+.item-example__image {
+	flex: 0 0 100px;
+}
+.item-example__image img{
+	max-width: 100%;
+}
+.item-example__text {
+	color: #fff;
+	line-height: 120%;
+}
